@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .parent-div {
+            display: flex;
+            flex: content;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            background-color: darkslategray;
+            height: 80px;
+            width: 100%;
+            word-spacing: 10px;
+        }
+
+        .child-div {
+            display: flex;
+            flex: inherit;
+            width: 20%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+        }
+
+        .btn {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            background-color: orange;
+            color: darkslategray;
+            font-size: large;
+        }
+
+        h1 {
+            color: darkslategray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: large;
+            font-weight: 800;
+            text-align: center;
+            margin-left: 1%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>LOGIN OR REGISTER</h1>
+    <div class="parent-div">
+        <div class="child-div">
+            <button class="btn"><a href="/login">Login</a></button>
+        </div>
+        <div class="child-div">
+            <button class="btn"><a href="/register">Register</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

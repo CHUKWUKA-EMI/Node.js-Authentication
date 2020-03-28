@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        nav {
+            background-color: darkslategray;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+            color: brown;
+            text-align: center;
+            height: 70px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: darkslategray;
+            font-size: large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            font-weight: 800;
+            margin-left: 45%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            background-color: orange;
+            color: darkslategray;
+            font-size: large;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <button class="btn"><a href="/logout">Logout</a></button>
+        </div>
+    </nav>
+    <h1>PROFILE</h1>
+    <p><span>Welcome:</span><%= user.firstname %> </p>
+    <p><span>id:</span><%= user.id %> </p>
+    <p><span>username:</span><%= user.username %> </p>
+</body>
+
+</html>

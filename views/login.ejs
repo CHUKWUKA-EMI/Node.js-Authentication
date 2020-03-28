@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+
+    <style>
+        .login-form {
+            width: 300px;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .login-form h1 {
+            text-align: center;
+            color: #4d4d4d;
+            font-size: 30px;
+            padding: 20px 0 20px 0;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"],
+        .login-form input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .login-form input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            background-color: #535b63;
+            border: 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .errorDiv {
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            font-size: 15px;
+            font-weight: bold;
+            color: red;
+
+        }
+
+        .flash-div {
+            display: block;
+            background-color: rgb(91, 236, 188);
+            color: red;
+            height: 30px;
+            word-spacing: 15px;
+            border-radius: 1rem;
+            text-align: center;
+            padding-top: 10px;
+            font-size: large;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="login-form">
+        <h1>Login</h1>
+        <% if(message.length>0){ %>
+        <div class="flash-div">
+            <%= message %>
+        </div>
+        <%}%>
+        <form id="form" action="/login" method="POST">
+            <p><label>
+                    <div id="nameError" class="errorDiv"></div>
+                    <input type="text" id="username" placeholder="Username" name="username" required>
+                </label></p>
+
+            <p><label>
+                    <div id="passError" class="errorDiv"></div>
+                    <input type="password" id="password" placeholder="Password" name="password" required>
+                </label></p>
+
+            <p><label>
+                    <div id="emailError" class="errorDiv"></div>
+                    <input type="email" id="email" placeholder="youremail@example.com" name="email" required>
+                </label></p>
+
+            <label>
+                <input type="submit" id="submit">
+            </label>
+            <p>Are you a new User? <a href="/register">Register</a></p>
+        </form>
+    </div>
+    <div id="newDiv">
+
+    </div>
+
+</body>
+
+</html>
