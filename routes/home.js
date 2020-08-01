@@ -1,15 +1,11 @@
-const express = require('express')
-const passport = require('passport')
+const express = require("express");
 
-const router = express.Router()
+const router = express.Router();
 
-const app = express()
+const app = express();
 
-router.get('/', (req, res) => {
-
-    res.render('home')
-})
-
-
+router.get("/", (req, res) => {
+	res.render("home");
+});
 
 module.exports = router;
