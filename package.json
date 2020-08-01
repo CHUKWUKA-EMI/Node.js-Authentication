@@ -5,10 +5,10 @@
 	"name": "web",
 	"version": "1.0.0",
 	"description": "Packages for building a login system",
-	"main": "./Server/start.js",
+	"main": "start.js",
 	"scripts": {
 		"test": "jest --watchAll",
-		"start": "node server/start.js",
+		"start": "node start.js",
 		"login": "nodemon start.js"
 	},
 	"author": "Chukwuka Emi",

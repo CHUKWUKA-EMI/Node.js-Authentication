@@ -10,7 +10,7 @@ require("dotenv").config();
 
 const app = express();
 
-require("../passport")(passport);
+require("./passport")(passport);
 
 app.use(express.urlencoded({ extended: true }));
 
@@ -30,7 +30,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-require("../routes/pages")(app, passport);
-app.use("/", require("../routes/home"));
+require("./routes/pages")(app, passport);
+app.use("/", require("./routes/home"));
 
 module.exports = app;
