@@ -8,7 +8,7 @@
 	"main": "./Server/start.js",
 	"scripts": {
 		"test": "jest --watchAll",
-		"start": "node start.js",
+		"start": "node server/start.js",
 		"login": "nodemon start.js"
 	},
 	"author": "Chukwuka Emi",
